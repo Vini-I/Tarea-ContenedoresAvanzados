@@ -15,6 +15,8 @@ public class JLayeredPane extends javax.swing.JFrame {
      */
     public JLayeredPane() {
         initComponents();
+        
+        capas.setSelectedIndex(2);
     }
 
     /**
@@ -26,31 +28,41 @@ public class JLayeredPane extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        jPanel1 = new javax.swing.JPanel();
+        LP1 = new javax.swing.JLayeredPane();
+        defaultLayer = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        palette = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        modal = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        popup = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        drag = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        icon = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        capas = new javax.swing.JComboBox<>();
+        iconOnTop = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLayeredPane1.setBackground(new java.awt.Color(204, 204, 204));
-        jLayeredPane1.setForeground(new java.awt.Color(255, 255, 255));
-        jLayeredPane1.setOpaque(true);
-        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        LP1.setBackground(new java.awt.Color(204, 204, 204));
+        LP1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LP1.setForeground(new java.awt.Color(255, 255, 255));
+        LP1.setOpaque(true);
+        LP1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                LP1MouseMoved(evt);
+            }
+        });
+        LP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 0));
-        jPanel1.setToolTipText("");
+        defaultLayer.setBackground(new java.awt.Color(255, 255, 0));
+        defaultLayer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        defaultLayer.setForeground(new java.awt.Color(255, 255, 0));
+        defaultLayer.setToolTipText("");
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -58,25 +70,26 @@ public class JLayeredPane extends javax.swing.JFrame {
         jLabel1.setText("Default");
         jLabel1.setName("De"); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout defaultLayerLayout = new javax.swing.GroupLayout(defaultLayer);
+        defaultLayer.setLayout(defaultLayerLayout);
+        defaultLayerLayout.setHorizontalGroup(
+            defaultLayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, defaultLayerLayout.createSequentialGroup()
                 .addContainerGap(22, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(20, 20, 20))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        defaultLayerLayout.setVerticalGroup(
+            defaultLayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(defaultLayerLayout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addGap(0, 84, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        LP1.add(defaultLayer, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(255, 0, 204));
+        palette.setBackground(new java.awt.Color(255, 0, 204));
+        palette.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -84,26 +97,27 @@ public class JLayeredPane extends javax.swing.JFrame {
         jLabel3.setText("Palette");
         jLabel3.setName("De"); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout paletteLayout = new javax.swing.GroupLayout(palette);
+        palette.setLayout(paletteLayout);
+        paletteLayout.setHorizontalGroup(
+            paletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paletteLayout.createSequentialGroup()
                 .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(22, 22, 22))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        paletteLayout.setVerticalGroup(
+            paletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paletteLayout.createSequentialGroup()
                 .addComponent(jLabel3)
                 .addGap(0, 80, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayer(jPanel2, javax.swing.JLayeredPane.PALETTE_LAYER);
-        jLayeredPane1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+        LP1.setLayer(palette, javax.swing.JLayeredPane.PALETTE_LAYER);
+        LP1.add(palette, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
-        jPanel3.setBackground(new java.awt.Color(0, 255, 255));
+        modal.setBackground(new java.awt.Color(0, 255, 255));
+        modal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -111,26 +125,27 @@ public class JLayeredPane extends javax.swing.JFrame {
         jLabel4.setText("Modal");
         jLabel4.setName("De"); // NOI18N
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout modalLayout = new javax.swing.GroupLayout(modal);
+        modal.setLayout(modalLayout);
+        modalLayout.setHorizontalGroup(
+            modalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modalLayout.createSequentialGroup()
                 .addContainerGap(29, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(24, 24, 24))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        modalLayout.setVerticalGroup(
+            modalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modalLayout.createSequentialGroup()
                 .addComponent(jLabel4)
                 .addGap(0, 80, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayer(jPanel3, javax.swing.JLayeredPane.MODAL_LAYER);
-        jLayeredPane1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
+        LP1.setLayer(modal, javax.swing.JLayeredPane.MODAL_LAYER);
+        LP1.add(modal, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(255, 0, 0));
+        popup.setBackground(new java.awt.Color(255, 0, 0));
+        popup.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -138,26 +153,27 @@ public class JLayeredPane extends javax.swing.JFrame {
         jLabel2.setText("Popup");
         jLabel2.setName("De"); // NOI18N
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout popupLayout = new javax.swing.GroupLayout(popup);
+        popup.setLayout(popupLayout);
+        popupLayout.setHorizontalGroup(
+            popupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(popupLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel2)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        popupLayout.setVerticalGroup(
+            popupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(popupLayout.createSequentialGroup()
                 .addComponent(jLabel2)
                 .addGap(0, 80, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayer(jPanel4, javax.swing.JLayeredPane.POPUP_LAYER);
-        jLayeredPane1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
+        LP1.setLayer(popup, javax.swing.JLayeredPane.POPUP_LAYER);
+        LP1.add(popup, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
 
-        jPanel5.setBackground(new java.awt.Color(0, 255, 51));
+        drag.setBackground(new java.awt.Color(0, 255, 51));
+        drag.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -165,33 +181,96 @@ public class JLayeredPane extends javax.swing.JFrame {
         jLabel5.setText("Drag");
         jLabel5.setName("De"); // NOI18N
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout dragLayout = new javax.swing.GroupLayout(drag);
+        drag.setLayout(dragLayout);
+        dragLayout.setHorizontalGroup(
+            dragLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dragLayout.createSequentialGroup()
                 .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(29, 29, 29))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        dragLayout.setVerticalGroup(
+            dragLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dragLayout.createSequentialGroup()
                 .addComponent(jLabel5)
                 .addGap(0, 78, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayer(jPanel5, javax.swing.JLayeredPane.DRAG_LAYER);
-        jLayeredPane1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
+        LP1.setLayer(drag, javax.swing.JLayeredPane.DRAG_LAYER);
+        LP1.add(drag, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
 
-        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 550, 380));
+        icon.setIcon(new javax.swing.ImageIcon("C:\\Users\\llean\\Downloads\\eye (3).png")); // NOI18N
+        icon.setText("jLabel7");
+        LP1.add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 70, -1));
+
+        getContentPane().add(LP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 600, 390));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel6.setText("Layered Panel");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 160, 40));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 160, 40));
+
+        capas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DEFAULT_LAYER", "PALETTE_LAYER", "MODAL_LAYER", "POPUP_LAYER", "DRAG_LAYER" }));
+        capas.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                capasItemStateChanged(evt);
+            }
+        });
+        capas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(capas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 90, -1));
+
+        iconOnTop.setText("Icono en Top");
+        iconOnTop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iconOnTopActionPerformed(evt);
+            }
+        });
+        getContentPane().add(iconOnTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void iconOnTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iconOnTopActionPerformed
+        if(iconOnTop.isSelected()) {
+            LP1.moveToFront(icon);
+        } else {
+            LP1.moveToBack(icon);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iconOnTopActionPerformed
+
+    private void capasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capasActionPerformed
+    
+    private int getSelectedLayerValue() {
+    String selected = (String) capas.getSelectedItem();
+        return switch (selected) {
+            case "DEFAULT_LAYER" -> LP1.DEFAULT_LAYER;
+            case "PALETTE_LAYER" -> LP1.PALETTE_LAYER;
+            case "MODAL_LAYER" -> LP1.MODAL_LAYER;
+            case "POPUP_LAYER" -> LP1.POPUP_LAYER;
+            case "DRAG_LAYER" -> LP1.DRAG_LAYER;
+            default -> LP1.DEFAULT_LAYER;
+        };
+}
+    
+    private void capasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_capasItemStateChanged
+        int pos = iconOnTop.isSelected() ? 0 : 1;
+        LP1.setLayer(icon,getSelectedLayerValue(),pos);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capasItemStateChanged
+    
+    private void LP1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LP1MouseMoved
+        int x = icon.getWidth();
+        int y = icon.getHeight();
+        icon.setLocation(evt.getX()-x, evt.getY()-y);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LP1MouseMoved
 
     /**
      * @param args the command line arguments
@@ -229,17 +308,20 @@ public class JLayeredPane extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLayeredPane LP1;
+    private javax.swing.JComboBox<String> capas;
+    private javax.swing.JPanel defaultLayer;
+    private javax.swing.JPanel drag;
+    private javax.swing.JLabel icon;
+    private javax.swing.JCheckBox iconOnTop;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel modal;
+    private javax.swing.JPanel palette;
+    private javax.swing.JPanel popup;
     // End of variables declaration//GEN-END:variables
 }
