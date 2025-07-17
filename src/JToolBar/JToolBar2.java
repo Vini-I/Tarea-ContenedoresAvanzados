@@ -39,7 +39,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         jToolBar1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jToolBar1.setRollover(true);
 
-        btnReturn.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\return.png")); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
         btnReturn.setFocusable(false);
         btnReturn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnReturn.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -51,7 +51,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         });
         jToolBar1.add(btnReturn);
 
-        btnPrincipal.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\house.png")); // NOI18N
+        btnPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/house.png"))); // NOI18N
         btnPrincipal.setFocusable(false);
         btnPrincipal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnPrincipal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -63,7 +63,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         jToolBar1.add(btnPrincipal);
         jToolBar1.add(jSeparator1);
 
-        btnExit.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\logout.png")); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
         btnExit.setFocusable(false);
         btnExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnExit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

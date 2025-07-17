@@ -42,7 +42,7 @@ public class Principal extends javax.swing.JFrame {
         jtbPrincipal.setRollover(true);
         jtbPrincipal.setBorderPainted(false);
 
-        btnExit.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\logout.png")); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
         btnExit.setFocusable(false);
         btnExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnExit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

@@ -52,7 +52,7 @@ public class JToolBar extends javax.swing.JFrame {
         });
         jtbStill.add(cbxItems);
 
-        btnInfo.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\information.png")); // NOI18N
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/information.png"))); // NOI18N
         btnInfo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnInfo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +63,7 @@ public class JToolBar extends javax.swing.JFrame {
         jtbStill.add(btnInfo);
         jtbStill.add(jSeparator3);
 
-        btnSalir.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\logout.png")); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
         btnSalir.setText("Exit");
         btnSalir.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
