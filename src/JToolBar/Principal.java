@@ -113,7 +113,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
         String username = txtUser.getText();
-        char[] password = pswPassword.getPassword();
+        char[] passwordChar = pswPassword.getPassword();
+        
+        String password = new String(passwordChar);
         
         if (username.equals("ToolBar") && password.equals("ToolBarExample")){
             JToolBar jtb1 = new JToolBar();
