@@ -4,6 +4,14 @@
  */
 package JToolBar;
 
+import java.io.IOException;
+import java.net.URL;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 /**
  *
  * @author rodol
@@ -29,6 +37,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         jToolBar1 = new javax.swing.JToolBar();
         btnReturn = new javax.swing.JButton();
         btnPrincipal = new javax.swing.JButton();
+        btnUsb = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JToolBar.Separator();
         btnExit = new javax.swing.JButton();
 
@@ -61,6 +70,20 @@ public class JToolBar2 extends javax.swing.JFrame {
             }
         });
         jToolBar1.add(btnPrincipal);
+
+        btnUsb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/usb-drive.png"))); // NOI18N
+        btnUsb.setFocusable(false);
+        btnUsb.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUsb.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnUsb.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnUsbMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnUsbMouseExited(evt);
+            }
+        });
+        jToolBar1.add(btnUsb);
         jToolBar1.add(jSeparator1);
 
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
@@ -93,9 +116,46 @@ public class JToolBar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-       this.dispose();
+       
+        this.dispose();
     }//GEN-LAST:event_btnExitActionPerformed
 
+    private void btnUsbMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUsbMouseEntered
+       playSound(HOVER_SOUND_FILE_PATH);
+    }//GEN-LAST:event_btnUsbMouseEntered
+
+    private void btnUsbMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUsbMouseExited
+        playSound(EXIT_SOUND_FILE_PATH);
+    }//GEN-LAST:event_btnUsbMouseExited
+    
+    private static final String HOVER_SOUND_FILE_PATH = "/Sounds/PlugIn.wav";
+    private static final String EXIT_SOUND_FILE_PATH = "/Sounds/PlugOut.wav";
+    
+    
+    private void playSound(String soundFilePath) {
+        try {
+            URL soundURL = getClass().getResource(soundFilePath);
+            if (soundURL == null) {
+                System.err.println("Archivo de sonido no encontrado en la ruta: " + soundFilePath);
+                return;
+            }
+
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundURL);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+
+            clip.addLineListener(event -> {
+                if (event.getType() == javax.sound.sampled.LineEvent.Type.STOP) {
+                    clip.close();
+                }
+            });
+
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+            System.err.println("Error al reproducir el sonido: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -135,6 +195,7 @@ public class JToolBar2 extends javax.swing.JFrame {
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnPrincipal;
     private javax.swing.JButton btnReturn;
+    private javax.swing.JButton btnUsb;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables

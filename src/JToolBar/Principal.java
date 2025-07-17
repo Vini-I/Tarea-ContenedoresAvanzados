@@ -4,6 +4,9 @@
  */
 package JToolBar;
 
+
+
+
 /**
  *
  * @author rodol
@@ -132,6 +135,7 @@ public class Principal extends javax.swing.JFrame {
         pswPassword.setText("");
     }//GEN-LAST:event_btnSignUpActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -177,4 +181,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPasswordField pswPassword;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
+
+    
 }

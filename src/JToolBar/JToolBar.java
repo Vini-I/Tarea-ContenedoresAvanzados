@@ -4,8 +4,7 @@
  */
 package JToolBar;
 
-import java.io.File;
-import javax.swing.JFileChooser;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -42,7 +41,6 @@ public class JToolBar extends javax.swing.JFrame {
         jtbStill.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jtbStill.setRollover(true);
         jtbStill.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jtbStill.setMargin(new java.awt.Insets(100, 100, 100, 100));
 
         cbxItems.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Principal", "JToolBar2" }));
         cbxItems.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +79,7 @@ public class JToolBar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+       
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
@@ -106,6 +105,7 @@ public class JToolBar extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Ejemplo de ToolBar con Botones y ComboBox", "Acerca de",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnInfoActionPerformed
 
+   
     /**
      * @param args the command line arguments
      */
