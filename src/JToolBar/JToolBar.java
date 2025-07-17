@@ -4,6 +4,10 @@
  */
 package JToolBar;
 
+import java.io.File;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Brwni
@@ -15,6 +19,7 @@ public class JToolBar extends javax.swing.JFrame {
      */
     public JToolBar() {
         initComponents();
+        jtbStill.setFloatable(false);
     }
 
     /**
@@ -26,21 +31,80 @@ public class JToolBar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jtbStill = new javax.swing.JToolBar();
+        cbxItems = new javax.swing.JComboBox<>();
+        btnInfo = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JToolBar.Separator();
+        btnSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jtbStill.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jtbStill.setRollover(true);
+        jtbStill.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jtbStill.setMargin(new java.awt.Insets(100, 100, 100, 100));
+
+        cbxItems.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opcion", "Principal", "JToolBar2" }));
+        cbxItems.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxItemsActionPerformed(evt);
+            }
+        });
+        jtbStill.add(cbxItems);
+
+        btnInfo.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\information.png")); // NOI18N
+        btnInfo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnInfo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoActionPerformed(evt);
+            }
+        });
+        jtbStill.add(btnInfo);
+        jtbStill.add(jSeparator3);
+
+        btnSalir.setIcon(new javax.swing.ImageIcon("C:\\Users\\rodol\\Downloads\\logout.png")); // NOI18N
+        btnSalir.setText("Exit");
+        btnSalir.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        jtbStill.add(btnSalir);
+
+        getContentPane().add(jtbStill, java.awt.BorderLayout.NORTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void cbxItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxItemsActionPerformed
+        String selectedItems = cbxItems.getSelectedItem().toString();
+        switch (selectedItems) {
+            case "Principal" : {
+                Principal main = new Principal();
+                main.setVisible(true);
+                this.dispose();
+                break;
+            }
+            case "JToolBar2" : {
+                JToolBar2 jtb2 = new JToolBar2();
+                jtb2.setVisible(true);
+                this.dispose();
+                break;
+            }
+    }
+    }//GEN-LAST:event_cbxItemsActionPerformed
+
+    private void btnInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoActionPerformed
+        JOptionPane.showMessageDialog(this, "Ejemplo de ToolBar con Botones y ComboBox", "Acerca de",JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnInfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +142,10 @@ public class JToolBar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnInfo;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JComboBox<String> cbxItems;
+    private javax.swing.JToolBar.Separator jSeparator3;
+    private javax.swing.JToolBar jtbStill;
     // End of variables declaration//GEN-END:variables
 }
