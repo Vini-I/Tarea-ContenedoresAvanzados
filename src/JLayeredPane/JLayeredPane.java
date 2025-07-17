@@ -200,7 +200,6 @@ public class JLayeredPane extends javax.swing.JFrame {
         LP1.setLayer(drag, javax.swing.JLayeredPane.DRAG_LAYER);
         LP1.add(drag, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
 
-        icon.setIcon(new javax.swing.ImageIcon("C:\\Users\\llean\\Downloads\\eye (3).png")); // NOI18N
         icon.setText("jLabel7");
         LP1.add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 70, -1));
 
