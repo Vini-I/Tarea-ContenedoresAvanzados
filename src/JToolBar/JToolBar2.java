@@ -46,7 +46,6 @@ public class JToolBar2 extends javax.swing.JFrame {
         jToolBar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jToolBar1.setFloatable(true);
         jToolBar1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jToolBar1.setRollover(true);
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/return.png"))); // NOI18N
         btnReturn.setFocusable(false);

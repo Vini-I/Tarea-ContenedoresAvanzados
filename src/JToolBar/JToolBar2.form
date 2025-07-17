@@ -32,7 +32,6 @@
         </Property>
         <Property name="floatable" type="boolean" value="true"/>
         <Property name="orientation" type="int" value="1"/>
-        <Property name="rollover" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
