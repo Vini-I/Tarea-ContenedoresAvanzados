@@ -37,7 +37,7 @@ public class JToolBar extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JToolBar.Separator();
         btnSalir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jtbStill.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jtbStill.setRollover(true);

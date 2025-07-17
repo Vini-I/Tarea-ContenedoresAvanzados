@@ -32,7 +32,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JToolBar.Separator();
         btnExit = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jToolBar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jToolBar1.setFloatable(true);
@@ -64,6 +64,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         jToolBar1.add(jSeparator1);
 
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
+        btnExit.setText("Exit");
         btnExit.setFocusable(false);
         btnExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnExit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

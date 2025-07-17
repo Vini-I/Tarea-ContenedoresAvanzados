@@ -36,13 +36,14 @@ public class Principal extends javax.swing.JFrame {
         btnSignUp = new javax.swing.JButton();
         pswPassword = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jtbPrincipal.setForeground(new java.awt.Color(255, 51, 51));
         jtbPrincipal.setRollover(true);
         jtbPrincipal.setBorderPainted(false);
 
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
+        btnExit.setText("Exit");
         btnExit.setFocusable(false);
         btnExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnExit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
