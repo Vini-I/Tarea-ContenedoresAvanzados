@@ -39,7 +39,7 @@ public class JToolBar2 extends javax.swing.JFrame {
         jToolBar1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jToolBar1.setRollover(true);
 
-        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/return.png"))); // NOI18N
         btnReturn.setFocusable(false);
         btnReturn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnReturn.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
